@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/swipe_refresh"
+            android:layout_above="@id/btn_movie_category"
+            android:layout_height="wrap_content">
+
+            <ViewFlipper
+                android:id="@+id/view_flipper_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/view_movie_list_loading" />
+
+                <include
+                    android:id="@+id/layout_movie_list_dashboard"
+                    layout="@layout/view_movie_list" />
+
+                <include
+                    android:id="@+id/layout_error_fetch_data"
+                    layout="@layout/view_error_fetch_data" />
+            </ViewFlipper>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/btn_movie_category"
+            style="@style/RippleWhite"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue_sky">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/category"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@android:color/white" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

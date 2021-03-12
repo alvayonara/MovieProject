@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="smallest_space">2dp</dimen>
+    <dimen name="smaller_space">4dp</dimen>
+    <dimen name="small_space">8dp</dimen>
+    <dimen name="space_6">6dp</dimen>
+    <dimen name="extra_small_space_10">10dp</dimen>
+    <dimen name="extra_small_space">12dp</dimen>
+    <dimen name="medium_space">16dp</dimen>
+    <dimen name="extra_medium_space">20dp</dimen>
+    <dimen name="large_space">24dp</dimen>
+    <dimen name="extra_large_space">28dp</dimen>
+    <dimen name="larger_space">32dp</dimen>
+    <dimen name="extra_larger_space">36dp</dimen>
+    <dimen name="largest_space">40dp</dimen>
+    <dimen name="largest_space_70">70dp</dimen>
+    <dimen name="largest_space_100">100dp</dimen>
+    <dimen name="largest_space_120">120dp</dimen>
+</resources>

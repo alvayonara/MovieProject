@@ -24,3 +24,27 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    coreKtxVersion = '1.3.2'
+    appCompatVersion = '1.2.0'
+    materialVersion = '1.3.0'
+    constraintLayoutVersion = '2.0.4'
+    legacySupportVersion = '1.0.0'
+    junitVersion = '4.13.2'
+    junitTestVersion = '1.1.2'
+    espressoVersion = '3.3.0'
+    glideVersion = '4.11.0'
+    circleImageVersion = '3.1.0'
+    retrofitVersion = '2.9.0'
+    loggingInterceptorVersion = '4.9.0'
+    roomVersion = '2.2.6'
+    timberVersion = '4.7.1'
+    moshiVersion = '1.11.0'
+    activityKtxVersion = '1.2.0'
+    fragmentKtxVersion = '1.3.0'
+    lifecycleVersion = '2.3.0'
+    daggerVersion = '2.31.2'
+    shimmerVersion = '0.5.0'
+    materialRippleVersion = '1.0.2'
+}
