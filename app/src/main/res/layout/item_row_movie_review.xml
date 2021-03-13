@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/spacing_middle">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iv_review_avatar"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="@dimen/circle_image_size"
+        android:layout_height="@dimen/circle_image_size"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@color/blue_sky" />
+        tools:src="@drawable/ic_profile_placeholder" />
 
     <TextView
         android:id="@+id/tv_review_author"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/spacing_large"
+        android:layout_marginEnd="@dimen/spacing_large"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/grey_40"
         android:textStyle="bold"
@@ -33,9 +33,9 @@
 
     <ImageView
         android:id="@+id/iv_rating"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginEnd="3dp"
+        android:layout_width="@dimen/spacing_large"
+        android:layout_height="@dimen/spacing_large"
+        android:layout_marginEnd="@dimen/spacing_small"
         android:contentDescription="@string/rating_icon"
         app:layout_constraintBottom_toBottomOf="@+id/tv_review_rating"
         app:layout_constraintEnd_toStartOf="@+id/tv_review_rating"
@@ -47,6 +47,7 @@
         android:id="@+id/tv_review_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_xmedium"
         android:gravity="center_vertical"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/grey_90"
@@ -55,19 +56,47 @@
         app:layout_constraintTop_toTopOf="@+id/tv_review_author"
         tools:text="10.0" />
 
-    <TextView
-        android:id="@+id/tv_review_content"
+    <RelativeLayout
+        android:id="@+id/layout_tv_review_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        android:lineSpacingExtra="4dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="@color/grey_60"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_review_avatar"
-        tools:text="Lorem ipsum dolor sit amet" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_review_avatar">
 
+        <com.ms.square.android.expandabletextview.ExpandableTextView
+            android:id="@+id/tv_review_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            expandableTextView:animAlphaStart="1"
+            expandableTextView:animDuration="300"
+            expandableTextView:maxCollapsedLines="4">
+
+            <TextView
+                android:id="@+id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:lineSpacingExtra="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/grey_60" />
+
+            <ImageButton
+                android:id="@id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/spacing_xmedium"
+                tools:ignore="ContentDescription" />
+        </com.ms.square.android.expandabletextview.ExpandableTextView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_middle"
+        android:background="@color/grey_10"
+        app:layout_constraintTop_toBottomOf="@+id/layout_tv_review_content" />
 </androidx.constraintlayout.widget.ConstraintLayout>

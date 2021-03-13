@@ -7,5 +7,7 @@ import timber.log.Timber
 abstract class BaseAdapter<T, VH : BaseViewHolder<T>>(
     diffCallback: DiffUtil.ItemCallback<T>
 ) : ListAdapter<T, VH>(diffCallback) {
-    protected fun setLog(message: String) { Timber.e(message) }
+    protected fun setLog(message: String) {
+        Timber.e(message)
+    }
 }

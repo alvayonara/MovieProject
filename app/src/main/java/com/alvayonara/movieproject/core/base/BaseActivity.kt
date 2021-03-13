@@ -35,11 +35,11 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     protected fun setLog(message: String) = Timber.e(message)
 
-    protected open fun releaseData(){}
-    protected open fun setupDialog(){}
-    protected open fun setupView(){}
-    protected open fun setupRecyclerView(){}
-    protected open fun subscribeViewModel(){}
+    protected open fun releaseData() {}
+    protected open fun setupDialog() {}
+    protected open fun setupView() {}
+    protected open fun setupRecyclerView() {}
+    protected open fun subscribeViewModel() {}
 
     protected fun <T> LiveData<T>.onLiveDataResult(action: (T) -> Unit) {
         observe(this@BaseActivity) { data ->

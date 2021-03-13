@@ -42,8 +42,9 @@ class ReviewAdapter : BaseAdapter<Review, ReviewAdapter.ReviewViewHolder>(diffCa
         private val binding: ItemRowMovieReviewBinding
     ) : BaseViewHolder<Review>(root) {
         override fun bindView(element: Review) {
+            val avatarPath = element.authorDetail.avatarPath
             binding.apply {
-                ivReviewAvatar.cacheImage(element.authorDetail.avatarPath)
+                ivReviewAvatar.cacheImage(avatarPath.let { if (it != "") it.substring(1) else it })
                 tvReviewAuthor.text = element.authorDetail.name
                 tvReviewRating.text = element.authorDetail.rating
                 tvReviewContent.text = element.content

@@ -3,7 +3,7 @@
     <!-- Ripple -->
     <style name="RippleWhite">
         <item name="mrl_rippleOverlay">true</item>
-        <item name="mrl_rippleColor">@color/color_grey_dark</item>
+        <item name="mrl_rippleColor">@color/grey_ripple</item>
         <item name="mrl_rippleHover">true</item>
         <item name="mrl_rippleAlpha">0.2</item>
     </style>

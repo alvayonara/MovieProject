@@ -18,9 +18,7 @@ abstract class BaseBottomSheetDialog<VB : ViewBinding> : BottomSheetDialogFragme
     protected val binding: VB
         get() = _binding as VB
 
-    override fun getTheme(): Int {
-        return R.style.AppBottomSheetDialogTheme
-    }
+    override fun getTheme(): Int = R.style.AppBottomSheetDialogTheme
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,7 +36,7 @@ abstract class BaseBottomSheetDialog<VB : ViewBinding> : BottomSheetDialogFragme
 
     abstract fun setup()
 
-    protected fun setLog(message: String){
+    protected fun setLog(message: String) {
         Timber.e(message)
     }
 

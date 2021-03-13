@@ -37,18 +37,24 @@ fun SwipeRefreshLayout.hideLoading() {
 /**
  * Image configuration
  */
-fun CircleImageView.cacheImage(path: String?) {
+fun CircleImageView.cacheImage(
+    path: String?,
+    errorPlaceholder: Int = R.drawable.ic_profile_placeholder
+) {
     Glide.with(this.context)
         .load(path)
-        .error(R.color.color_grey)
+        .error(errorPlaceholder)
         .into(this)
 }
 
-fun ImageView.cacheImage(path: String?) {
+fun ImageView.cacheImage(
+    path: String?,
+    errorPlaceholder: Int = R.drawable.ic_image_placeholder
+) {
     Glide.with(this.context)
         .load(BASE_URL_TMDB_POSTER + path)
         .transition(DrawableTransitionOptions.withCrossFade(200))
-        .error(R.color.color_grey)
+        .error(errorPlaceholder)
         .into(this)
 }
 

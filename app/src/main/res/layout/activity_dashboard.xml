@@ -15,10 +15,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:layout_width="match_parent"
             android:id="@+id/swipe_refresh"
-            android:layout_above="@id/btn_movie_category"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_movie_category">
 
             <ViewFlipper
                 android:id="@+id/view_flipper_dashboard"
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentBottom="true"
-            android:background="@color/blue_sky">
+            android:background="@color/blue_500">
 
             <TextView
                 android:layout_width="wrap_content"

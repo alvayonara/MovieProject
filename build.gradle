@@ -54,4 +54,5 @@ ext {
     daggerVersion = '2.31.2'
     shimmerVersion = '0.5.0'
     materialRippleVersion = '1.0.2'
+    expandableTextViewVersion = '0.1.4'
 }

@@ -37,13 +37,12 @@
             <item android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp">
                 <shape android:shape="rectangle">
                     <corners android:bottomLeftRadius="30dp" android:bottomRightRadius="30dp" android:radius="60dp" android:topLeftRadius="30dp" android:topRightRadius="30dp" />
-                    <stroke android:width="2dp" android:color="@color/blue_sky" />
-                    <solid android:color="@color/blue_sky" />
+                    <stroke android:width="2dp" android:color="@color/blue_500" />
+                    <solid android:color="@color/blue_500" />
                     <padding android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp" />
                     <size android:width="150dp" android:height="50dp" />
                 </shape>
             </item>
         </layer-list>
-
     </item>
 </selector>

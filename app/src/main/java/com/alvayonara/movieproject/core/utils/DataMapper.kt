@@ -72,7 +72,7 @@ object DataMapper {
                 id = it.id.orEmpty(),
                 authorDetail = it.author_details.let { data ->
                     AuthorDetail(
-                        name = if (data?.name.isNullOrBlank()) "-" else data?.name.orEmpty(),
+                        name = if (data?.name.isNullOrBlank()) "Anonymous" else data?.name.orEmpty(),
                         avatarPath = data?.avatar_path.orEmpty(),
                         rating = data?.rating ?: "0.0"
                     )

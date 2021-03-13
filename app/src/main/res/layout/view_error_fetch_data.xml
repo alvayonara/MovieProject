@@ -15,9 +15,9 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="220dp"
-            android:layout_height="220dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="@dimen/image_no_connection_width"
+            android:layout_height="@dimen/image_no_connection_height"
+            android:layout_marginTop="@dimen/spacing_xlarge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -28,10 +28,10 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/spacing_medium"
             android:text="@string/error_title"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:textColor="#263238"
+            android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,11 +39,11 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="330dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/spacing_large"
             android:gravity="center"
-            android:lineSpacingExtra="5dp"
+            android:lineSpacingExtra="@dimen/spacing_medium"
             android:text="@string/error_message"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
             android:textColor="@android:color/black"
@@ -55,17 +55,15 @@
             android:id="@+id/btn_retry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/spacing_mxlarge"
             android:background="@drawable/btn_rounded_shape"
-            android:paddingStart="32dp"
-            android:paddingEnd="32dp"
+            android:paddingStart="@dimen/spacing_xlarge"
+            android:paddingEnd="@dimen/spacing_xlarge"
             android:text="@string/retry"
             android:textAppearance="@style/TextAppearance.AppCompat.Menu"
-            android:textColor="@android:color/white"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

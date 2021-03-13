@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.alvayonara.movieproject.MyApplication
 import com.alvayonara.movieproject.R
 import com.alvayonara.movieproject.core.base.BaseActivity
@@ -15,7 +14,6 @@ import com.alvayonara.movieproject.core.ui.ViewModelFactory
 import com.alvayonara.movieproject.core.utils.ConstUiState.UI_STATE_FAVORITE_IS_EMPTY
 import com.alvayonara.movieproject.core.utils.ConstUiState.UI_STATE_FAVORITE_IS_NOT_EMPTY
 import com.alvayonara.movieproject.core.utils.ConstUiState.UI_STATE_FAVORITE_LOADING
-import com.alvayonara.movieproject.core.utils.hideLoading
 import com.alvayonara.movieproject.core.utils.moveActivity
 import com.alvayonara.movieproject.databinding.ActivityFavoriteBinding
 import com.alvayonara.movieproject.ui.detail.DetailActivity

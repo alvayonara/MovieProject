@@ -9,7 +9,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class LocalDataSource @Inject constructor(private val movieDao: MovieDao): BaseDataSource() {
+class LocalDataSource @Inject constructor(private val movieDao: MovieDao) : BaseDataSource() {
 
     fun getFavoriteMovie(): LiveData<List<MovieEntity>> = movieDao.getFavoriteMovie()
 

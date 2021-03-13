@@ -111,4 +111,7 @@ dependencies {
 
     // Material Ripple
     implementation "com.balysv:material-ripple:$materialRippleVersion"
+
+    // Expandable Text View
+    implementation "com.ms-square:expandableTextView:$expandableTextViewVersion"
 }

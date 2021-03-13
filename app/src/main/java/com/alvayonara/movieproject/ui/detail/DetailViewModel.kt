@@ -1,14 +1,8 @@
 package com.alvayonara.movieproject.ui.detail
 
 import androidx.lifecycle.*
-import com.alvayonara.movieproject.core.data.source.remote.network.Result
-import com.alvayonara.movieproject.core.data.source.remote.response.MovieResponse
-import com.alvayonara.movieproject.core.data.source.remote.response.Parser
-import com.alvayonara.movieproject.core.data.source.remote.response.ReviewResponse
 import com.alvayonara.movieproject.core.domain.model.Movie
 import com.alvayonara.movieproject.core.domain.usecase.MovieUseCase
-import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

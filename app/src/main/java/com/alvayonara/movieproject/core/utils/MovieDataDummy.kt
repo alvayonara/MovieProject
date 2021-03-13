@@ -1,8 +1,6 @@
 package com.alvayonara.movieproject.core.utils
 
-import com.alvayonara.movieproject.core.data.source.remote.response.AuthorDetailResponse
 import com.alvayonara.movieproject.core.data.source.remote.response.MovieResponse
-import com.alvayonara.movieproject.core.data.source.remote.response.ReviewResponse
 import com.alvayonara.movieproject.core.domain.model.Movie
 import com.alvayonara.movieproject.core.domain.model.MovieCategory
 import com.alvayonara.movieproject.core.utils.ConstMovieCategory.MOVIE_NOW_PLAYING_NAME
