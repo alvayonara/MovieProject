@@ -60,13 +60,6 @@ dependencies {
     testImplementation "androidx.arch.core:core-testing:$coreTestingVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinCoroutinesTestVersion"
 
-    // Instrumental Testing
-    androidTestImplementation "androidx.test:runner:$testRunnerVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
-    androidTestImplementation "androidx.test:rules:$testRulesVersion"
-    androidTestImplementation "androidx.test.ext:junit:$testJunitVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
-
     // Glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
 
