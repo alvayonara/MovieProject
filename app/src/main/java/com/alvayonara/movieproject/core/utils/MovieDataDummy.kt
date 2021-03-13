@@ -65,31 +65,4 @@ object MovieDataDummy {
             posterPath = it.poster_path.orEmpty()
         )
     }
-
-    fun generateRemoteDummyReviews(): List<ReviewResponse> {
-        val reviews = ArrayList<ReviewResponse>()
-        reviews.add(
-            ReviewResponse(
-                id = "603d201b33a533004bd1906e",
-                author_details = AuthorDetailResponse(
-                    name = "",
-                    avatar_path = "/https://secure.gravatar.com/avatar/3593437cbd05cebe0a4ee753965a8ad1.jpg",
-                    rating = null
-                ),
-                content = "In a magical land known as Kumandra; Humans and Dragons co-exist in harmony."
-            )
-        )
-        reviews.add(
-            ReviewResponse(
-                id = "920",
-                author_details = AuthorDetailResponse(
-                    name = "",
-                    avatar_path = "/https://secure.gravatar.com/avatar/992eef352126a53d7e141bf9e8707576.jpg",
-                    rating = "7.0"
-                ),
-                content = "If you enjoy reading my Spoiler-Free reviews, please follow my blog @\\r\\nhttps://www.msbreviews.com\\r\\n\\r\\nDisney purchased Pixar way back in 2006, and many incredible animated films have been released under both banners."
-            )
-        )
-        return reviews
-    }
 }
