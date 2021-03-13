@@ -53,7 +53,7 @@ fun ImageView.cacheImage(path: String?) {
 }
 
 /**
- * Image configuration
+ * Date Time converter
  */
 @SuppressLint("SimpleDateFormat")
 fun String?.convertDateTime(

@@ -20,16 +20,22 @@ class DetailViewModel @Inject constructor(private val movieUseCase: MovieUseCase
         this.movieId.value = movieId
     }
 
-    val getMovieById = Transformations.switchMap(movieId) {
-        movieUseCase.getMovieById(it, viewModelScope)
+    val getMovieById = movieId.switchMap {
+        liveData {
+            emitSource(movieUseCase.getMovieById(it).asLiveData())
+        }
     }
 
-    val getReview = Transformations.switchMap(movieId) {
-        movieUseCase.getReview(it, viewModelScope)
+    val getReview = movieId.switchMap {
+        liveData {
+            emitSource(movieUseCase.getReview(it).asLiveData())
+        }
     }
 
-    val checkIsFavoriteMovie = Transformations.switchMap(movieId) {
-        movieUseCase.checkIsFavoriteMovie(it)
+    val checkIsFavoriteMovie = movieId.switchMap {
+        liveData {
+            emitSource(movieUseCase.checkIsFavoriteMovie(it).asLiveData())
+        }
     }
 
     fun insertFavoriteMovie(movie: Movie) =

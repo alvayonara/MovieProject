@@ -71,7 +71,6 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(),
 
     override fun subscribeViewModel() {
         detailViewModel.setMovieId(movieId)
-
         detailViewModel.getMovieById.onLiveDataResult {
             binding.viewFlipperDetail.displayedChild = when (it.status) {
                 LOADING -> {

@@ -1,9 +1,6 @@
 package com.alvayonara.movieproject.ui.dashboard
 
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.alvayonara.movieproject.core.domain.usecase.MovieUseCase
 import javax.inject.Inject
 
@@ -15,7 +12,9 @@ class DashboardViewModel @Inject constructor(private val movieUseCase: MovieUseC
         this.movieCategory.value = movieCategory
     }
 
-    val getMovie = Transformations.switchMap(movieCategory) {
-        movieUseCase.getMovie(it, viewModelScope)
+    val getMovie = movieCategory.switchMap {
+        liveData {
+            emitSource(movieUseCase.getMovie(it).asLiveData())
+        }
     }
 }

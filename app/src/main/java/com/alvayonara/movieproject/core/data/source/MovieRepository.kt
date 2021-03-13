@@ -2,20 +2,16 @@ package com.alvayonara.movieproject.core.data.source
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
-import androidx.paging.LivePagedListBuilder
-import androidx.paging.PagedList
 import com.alvayonara.movieproject.core.data.source.local.LocalDataSource
-import com.alvayonara.movieproject.core.data.source.local.entity.MovieEntity
 import com.alvayonara.movieproject.core.data.source.remote.RemoteDataSource
 import com.alvayonara.movieproject.core.data.source.remote.network.Result
-import com.alvayonara.movieproject.core.data.source.remote.network.Result.Status.*
 import com.alvayonara.movieproject.core.data.source.remote.response.MovieResponse
 import com.alvayonara.movieproject.core.data.source.remote.response.Parser
 import com.alvayonara.movieproject.core.data.source.remote.response.ReviewResponse
 import com.alvayonara.movieproject.core.domain.model.Movie
 import com.alvayonara.movieproject.core.domain.repository.IMovieRepository
 import com.alvayonara.movieproject.core.utils.DataMapper
-import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -25,27 +21,21 @@ class MovieRepository @Inject constructor(
     private val localDataSource: LocalDataSource
 ) : IMovieRepository {
 
-    override fun getMovie(
-        category: String,
-        scope: CoroutineScope
-    ): LiveData<Result<Parser<List<MovieResponse>>>> = remoteDataSource.getMovie(category, scope)
+    override suspend fun getMovie(category: String): Flow<Result<Parser<List<MovieResponse>>>> =
+        remoteDataSource.getMovie(category)
 
-    override fun getMovieById(
-        movieId: String,
-        scope: CoroutineScope
-    ): LiveData<Result<MovieResponse>> = remoteDataSource.getMovieById(movieId, scope)
+    override suspend fun getMovieById(movieId: String): Flow<Result<MovieResponse>> =
+        remoteDataSource.getMovieById(movieId)
 
-    override fun getReview(
-        movieId: String,
-        scope: CoroutineScope
-    ): LiveData<Result<Parser<List<ReviewResponse>>>> = remoteDataSource.getReview(movieId, scope)
+    override suspend fun getReview(movieId: String): Flow<Result<Parser<List<ReviewResponse>>>> =
+        remoteDataSource.getReview(movieId)
 
     override fun getFavoriteMovie(): LiveData<List<Movie>> =
         localDataSource.getFavoriteMovie().map {
             DataMapper.mapMovieDetailEntitiesToDomain(it)
         }
 
-    override fun checkIsFavoriteMovie(id: String): LiveData<Int> =
+    override fun checkIsFavoriteMovie(id: String): Flow<Int> =
         localDataSource.checkIsFavoriteMovie(id)
 
     override suspend fun insertFavoriteMovie(movie: Movie) =
