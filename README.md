@@ -1,6 +1,4 @@
 # MovieProject
-[![alvayonara](https://circleci.com/gh/alvayonara/MovieProject.svg?style=shield)](https://circleci.com/gh/alvayonara/MovieProject)
-
 Simple movie catalogue apps using [TMDB API](https://developers.themoviedb.org) to get movie data.<br/>
 There are 3 features on this apps:
 1. Discover movies by category (Popular, Upcoming, Top Rated, Now Playing)
@@ -9,7 +7,7 @@ There are 3 features on this apps:
 
 ## Download
 
-Go to ths [MovieProject Circle CI](https://circleci.com/gh/alvayonara/MovieProject) to download the APK debug directly
+Go to ths [MovieProject Circle CI](https://circleci.com/gh/alvayonara/MovieProject) to download the APK debug directly.
 
 ## Stack and Libraries
 
