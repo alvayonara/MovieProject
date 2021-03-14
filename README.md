@@ -7,7 +7,7 @@ There are 3 features on this apps:
 
 ## Download
 
-Go to ths [MovieProject Circle CI](https://circleci.com/gh/alvayonara/MovieProject) to download the APK debug directly.
+Go to this [MovieProject Circle CI](https://circleci.com/gh/alvayonara/MovieProject) to download the APK debug directly.
 
 ## Stack and Libraries
 
